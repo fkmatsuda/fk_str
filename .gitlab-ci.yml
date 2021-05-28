@@ -1,4 +1,4 @@
-image: golang:1.16-buster
+image: fkmatsuda/smeago-builder:0.22.0
 
 include:
   - template: License-Scanning.gitlab-ci.yml
@@ -19,7 +19,6 @@ go-tests:
   stage: test
   before_script:
     - mkdir -p test_report
-    - go get -u github.com/jstemmer/go-junit-report
   script:
     - go test -v 2>&1 | go-junit-report -set-exit-code > test_report/go-report.xml
   artifacts:
