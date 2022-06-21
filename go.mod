@@ -1,3 +1,3 @@
-module gitlab.com/fkmatsuda.dev/go/fk_str
+module github.com/fkmatsuda/fk_str
 
-go 1.16
+go 1.18
